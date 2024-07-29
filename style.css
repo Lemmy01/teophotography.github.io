@@ -1,0 +1,234 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    background: #e0f7fa; /* Albastru deschis */
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    height: 100vh;
+    background-image: url('assets/images/background.jpg'); /* Imagine de fundal */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.hero-content .btn {
+    background: #007bff; /* Azure */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+    background: #0056b3; /* Azure Dark */
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #007bff; /* Azure */
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.number {
+    
+        font-size: 10em; /* Ajustează dimensiunea textului după necesitate */
+        color: #e0f7fa; /* Face textul transparent */
+        text-shadow: 
+            1px 1px 0 #007bff, 
+            -1px -1px 0 #007bff,  
+            1px -1px 0 #007bff,  
+            -1px 1px 0 #007bff; /* Creează un contur de 1px în jurul textului */
+        font-weight: bold; /* Optional: pentru un contur mai gros */
+        text-align: center; /* Aliniază textul în centru */
+        margin: 20px 0; /* Ajustează marginile după necesitate */
+        font-family: "Inter", Sans-serif;
+        -webkit-text-stroke-color: wh;
+    
+}
+
+#portfolio{
+    text-align: center;
+    margin: 20px; /* Margin around the container */
+}
+/* Gallery Styles */
+.gallery {
+    width: 100%;
+
+    display: flex;
+    overflow-x: auto;
+  
+
+
+    gap: 20px;
+
+    scroll-snap-type: x mandatory;
+  
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+/* Reasons Section Styles */
+.reasons {
+    padding: 80px 0;
+}
+
+.reason {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+
+.reason-image {
+    flex: 1 1 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.reason-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reason-text {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.reason-text h3 {
+    font-size: 2em;
+    color: #007bff; /* Azure */
+    margin-bottom: 15px;
+}
+
+.reason-text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #e0f7fa; /* Albastru deschis */
+    padding: 50px 0;
+}
+
+#contact p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #007bff; /* Azure */
+    font-weight: bold;
+}
+
+footer {
+    background: #007bff; /* Azure */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
